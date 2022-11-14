@@ -20,14 +20,14 @@ def run_discord_bot():
         
     
         if message.content.lower().startswith('$results'):            
+            user_name= str(message.author)
+            user_message = str(message.content)
+            channel = str(message.channel)
+            print(f"{user_name} said: '{user_message}' in ({channel}) ")
             await message.channel.send(file = discord.File('contestPoster.png'))
             await message.channel.send(CM.results())
+            
 
-        user_name= str(message.author)
-        user_message = str(message.content)
-        channel = str(message.channel)
-
-        print(f"{user_name} said: '{user_message}' in ({channel}) ")
     client.run(OauthToken) 
 
 
