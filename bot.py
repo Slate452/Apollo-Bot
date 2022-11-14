@@ -3,7 +3,7 @@ import discord
 import os 
 
 def run_discord_bot():
-    OauthToken = os.getenv('TOKEN')
+    OauthToken = '<TOKEN>'
     intents = discord.Intents.all()
     client = discord.Client(intents=intents) 
 
