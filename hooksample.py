@@ -6,9 +6,9 @@ import json
 
 webhook_url = 'http://127.0.0.1:5000/webhook'
 
-data ={ "Contestant Voted ":"Kenet",                       #infoemation about the vote
-        "Voter Discord": "mango#4322",
-        "Voter Address": "TERBV2U3B1287WEF234VKK234BV2344645EWRW4",       
+data ={ "Contestant Voted":"Tfab",                       #infoemation about the vote
+        "Voter Discord": "manda#4432",
+        "Voter Address": "TE4E57768HT4556234VKK234BV2344645EWRW4",       
         "Date and Time": "4:21 11/18/2022"
          }
 

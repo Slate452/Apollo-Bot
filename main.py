@@ -12,7 +12,7 @@ def webhook():
     data = request.json
     Voter = data['Voter Discord'] 
     VoteTime = data['Date and Time']
-    Contestant_Voted = data['Contestant_Voted']
+    Contestant_Voted = data['Contestant Voted']
     Voters_wallet = data['Voter Address']
     
     vbot.Addvote(Voter,Voters_wallet, Contestant_Voted,VoteTime)
