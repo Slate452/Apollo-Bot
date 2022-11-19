@@ -20,5 +20,6 @@ Test:
         This throws a simple wwbhook to simulate a vote event
 
 
-**votes are stored an accessed via a free my sql database **
+**votes are stored an accessed via a free my sql database**
 
+***Things are seperated alot at the moment***

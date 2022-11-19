@@ -3,7 +3,7 @@ import discord
 import os 
 
 def run_discord_bot():
-    OauthToken = '<TOKEN>'
+    OauthToken = 'token'
     intents = discord.Intents.all()
     client = discord.Client(intents=intents) 
 
@@ -18,14 +18,13 @@ def run_discord_bot():
         if message.author == client.user:
             return
         
-    
         if message.content.lower().startswith('$results'):            
             user_name= str(message.author)
             user_message = str(message.content)
             channel = str(message.channel)
             print(f"{user_name} said: '{user_message}' in ({channel}) ")
             await message.channel.send(file = discord.File('contestPoster.png'))
-            await message.channel.send(CM.Reults())
+            await message.channel.send(CM.Results())
             
 
     client.run(OauthToken) 
