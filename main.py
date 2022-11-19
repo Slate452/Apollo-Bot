@@ -16,7 +16,7 @@ def webhook():
     Voters_wallet = data['Voter Address']
     
     vbot.Addvote(Voter,Voters_wallet, Contestant_Voted,VoteTime)
-    Current_Results = "Top 3\n" +vbot.Reults()
+    Current_Results = "Top 3\n" + vbot.Results()
 
     message= "$New Vote \n" + Voter + " voted for "+ Contestant_Voted +"\n"
 
