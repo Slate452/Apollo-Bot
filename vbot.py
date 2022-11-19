@@ -1,7 +1,5 @@
 '''
-*Vote Server*
-
-*****functions******
+*****Functions******
 
   1. SendNewVote:
       This fuctions sends a discord webhook to the announcement channel in the ApolloDAO server
@@ -44,7 +42,6 @@ def Addvote(voters_discord, voters_wallet, Contestant, Date_Time ):
 #get current Results
 def Reults():
   contestants = votes.cursor
-  # get Contestants 
   Announce_results = "Current Results \n"
   sql2 = "SELECT `Contestant`, COUNT(*) AS `count` FROM `Votes` GROUP BY `Contestant` ORDER BY `count` DESC LIMIT 3" 
   contestants.execute(sql2)
