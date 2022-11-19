@@ -1,4 +1,4 @@
-import ContestMonitor as CM
+import vbot as CM
 import discord
 import os 
 
@@ -25,7 +25,7 @@ def run_discord_bot():
             channel = str(message.channel)
             print(f"{user_name} said: '{user_message}' in ({channel}) ")
             await message.channel.send(file = discord.File('contestPoster.png'))
-            await message.channel.send(CM.results())
+            await message.channel.send(CM.Reults())
             
 
     client.run(OauthToken) 
