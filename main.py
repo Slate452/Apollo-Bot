@@ -21,7 +21,7 @@ def webhook():
     message= "$New Vote \n" + Voter + " voted for "+ Contestant_Voted +"\n"
 
     vbot.sendNewVote(message)
-    vbot.sendNewVote(Current_Results)
+    vbot.sendMessage(Current_Results)
     return 'sucess', 200
   else:
     abort(400)

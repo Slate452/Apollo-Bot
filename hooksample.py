@@ -4,11 +4,11 @@
 import requests
 import json
 
-webhook_url = 'http://127.0.0.1:5000/webhook'
+webhook_url = 'https://kene452.pythonanywhere.com/webhook'
 
 data ={ "Contestant Voted":"Tfab",                       #infoemation about the vote
-        "Voter Discord": "manda#4432",
-        "Voter Address": "TE4E57768HT4556234VKK234BV2344645EWRW4",       
+        "Voter Discord": "MEchww#3161",
+        "Voter Address": "her23F556234VKK234BV2344645qweF16",       
         "Date and Time": "4:21 11/18/2022"
          }
 

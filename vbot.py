@@ -19,12 +19,19 @@ import mysql.connector as connt
 # works
 #send Webhook to annoncement Channel
 def sendNewVote(string):
-  webhook = DiscordWebhook(url ='boturl',username = 'Contest Bot', content = string)
+  webhook = DiscordWebhook(url ='https://discord.com/api/webhooks/1041809583930343435/xNE3cI-ednAb6WjQubuyZCKQAay1lmG4ibVmqk3zhGM9wqswXUVyBk2U7sLT6YfWmwV3',username = 'Contest Bot', content = string)
   embed = DiscordEmbed(title = "**New Vote**", color = 242424 )
   embed.set_image(url ="https://bafybeidvu3oxafwvop5evgualfysymch3y3lqllcfq6dchhyziu7cuqtt4.ipfs.nftstorage.link/f0dc1e96194e11e4a6a4a8febbefacaa3acfa54c8d439ecf6f4ac577104c9c0c.png")
   webhook.add_embed(embed)  
   reponse = webhook.execute()
   print(reponse)
+  return
+
+def sendMessage(string):
+  Mwebhook = DiscordWebhook(url ='https://discord.com/api/webhooks/1041809583930343435/xNE3cI-ednAb6WjQubuyZCKQAay1lmG4ibVmqk3zhGM9wqswXUVyBk2U7sLT6YfWmwV3',username = 'Contest Bot', content = string)
+  Membed = DiscordEmbed(title = "**Top 3**", color = 243424 )
+  Mwebhook.add_embed(Membed)
+  Mwebhook.execute()
   return
 
 #register Vote in DataBase
@@ -35,10 +42,13 @@ def Addvote(voters_discord, voters_wallet, Contestant, Date_Time ):
   passwd ="EV9nXHHLAM", 
   database = "sql7578616"
   )
+  #not comfortable with date and time yet
+  print(Date_Time)
+  #add row
   vote = votesAV.cursor()
-  sql = f"INSERT INTO `Votes` (`Voters_Discord`, `Voters Wallet`, `Contestant`) VALUES ({voters_discord}, {voters_wallet}, {Contestant});"
+  sql = f"INSERT INTO `Votes` (`Voters_Discord`, `Voters Wallet`, `Contestant`) VALUES ('{voters_discord}', '{voters_wallet}', '{Contestant}');"
   vote.execute(sql)
-  votes.commit()
+  votesAV.commit()
 
 #get current Results
 def Results():
